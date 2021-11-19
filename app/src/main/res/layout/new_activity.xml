@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewActivity">
+
+    <ImageView
+        android:id="@+id/imagen1"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        android:layout_height="match_parent"
+        android:layout_marginStart="72dp"
+        android:layout_weight="50"
+        android:contentDescription="@string/imagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/video1"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonImagen" />
+
+    <VideoView
+        android:id="@+id/video1"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imagen1"
+        app:layout_constraintTop_toBottomOf="@id/buttonVideo" />
+
+    <Button
+        android:id="@+id/buttonImagen"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        android:layout_height="wrap_content"
+        android:text="@string/FOTOBRASO"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/buttonVideo"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonVideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/VIDEOPIE"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/buttonImagen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        tools:ignore="TextContrastCheck" />
+
+</android.support.constraint.ConstraintLayout>
